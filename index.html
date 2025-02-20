@@ -3,81 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preethu Nath | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <title>Preethu Nath Manjunath | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
+
     <header>
         <nav>
-            <h1>Preethu Nath</h1>
+            <h1>Preethu Nath Manjunath</h1>
+            <h2 class="subtitle">Data Scientist</h2>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <section id="about" class="section">
-        <div class="container">
-            <img src="assets/memoji.png" alt="Preethu Nath Memoji" class="profile-img">
-            <div class="text">
+        <div class="container about-container">
+            <img src="assets/memoji.png" alt="Preethu's Memoji" class="profile-pic small-pic">
+            <div class="about-text">
                 <h2>Hi there, I'm Preethu</h2>
-                <p>Data Scientist leveraging AI and ML to extract insights, automate processes, and enhance decision-making.</p>
-                <div class="tags">
-                    <div class="tag">📊 4+ years of experience</div>
-                    <div class="tag">🤖 Developed NLP models</div>
-                    <div class="tag">📈 Business Intelligence</div>
-                </div>
+                <p class="justify">Specialized in leveraging AI and data science to <strong>extract insights, automate processes, and enhance decision-making.</strong></p>
+                <p class="justify">I have worked with startups, consulting firms, and research teams to develop <strong>ML models, NLP solutions, and BI dashboards</strong>, transforming complex data into actionable intelligence.</p>
+            </div>
+        </div>
+        <div class="highlight-container">
+            <div class="highlight-box">
+                <p>📊 <strong>4+ years of experience</strong> in AI, ML, and data science across consulting, research, and startups.</p>
+            </div>
+            <div class="highlight-box">
+                <p>🤖 <strong>Developed NLP models</strong>, predictive analytics, and LLM-powered solutions to optimize business strategies.</p>
+            </div>
+            <div class="highlight-box">
+                <p>📈 <strong>Empowered businesses</strong> with data-driven insights, driving measurable outcomes.</p>
             </div>
         </div>
     </section>
 
+</body>
+</html>
+
     <section id="skills" class="section">
         <h2>Skills</h2>
         <ul class="skill-list">
-            <li>Machine Learning</li>
-            <li>Natural Language Processing</li>
-            <li>Data Engineering</li>
+            <li>Machine Learning, Deep Learning, Predictive Analytics</li>
+            <li>Natural Language Processing (NLP), Large Language Models (LLMs)</li>
+            <li>Data Engineering (ETL Pipelines, SQL, MongoDB, Snowflake, Postgres)</li>
             <li>Cloud Computing (AWS, GCP, Azure)</li>
-            <li>Tableau, Power BI, Supabase</li>
-            <li>Big Data Analytics</li>
-            <li>Python, SQL, LangChain</li>
+            <li>Business Intelligence (Tableau, Power BI, Supabase)</li>
+            <li>Python, SQL, LangChain, Flask, FastAPI</li>
+            <li>Generative AI (GPT, Claude, Hugging Face Transformers)</li>
+            <li>Data Visualization & Web Scraping (BeautifulSoup, Selenium)</li>
         </ul>
     </section>
 
     <section id="experience" class="section">
         <h2>Experience</h2>
         <div class="experience-grid">
+
             <div class="experience-card">
                 <h3>KOBEYO | Data Consultant Intern</h3>
                 <p>Dec 2024 - Present</p>
                 <ul>
-                    <li>Designed Tableau dashboards for job insights.</li>
-                    <li>Automated data pipelines reducing execution time by 50%.</li>
-                    <li>Performed geospatial analysis to improve employer-seeker matchmaking.</li>
+                    <li>Designed and deployed Tableau dashboards for job insights.</li>
+                    <li>Automated data ingestion pipelines, reducing query execution time by 50%.</li>
+                    <li>Conducted geospatial market analysis to improve job-matching accuracy.</li>
                 </ul>
             </div>
+
             <div class="experience-card">
                 <h3>Deloitte USI | Data Scientist Consultant</h3>
                 <p>Jan 2022 - Jul 2023</p>
                 <ul>
-                    <li>Built NLP models for automated news alerts.</li>
-                    <li>Developed AI-powered risk tracking tools.</li>
-                    <li>Designed AI models for event detection in financial transactions.</li>
+                    <li>Built AI-powered risk tracking tools for a finance client.</li>
+                    <li>Developed NLP models for real-time news alerts with 90% accuracy.</li>
+                    <li>Implemented LLM-driven solutions for PDF processing automation.</li>
                 </ul>
             </div>
+
             <div class="experience-card">
-                <h3>Hexaware Technologies | Data Scientist</h3>
+                <h3>CodeModulo Technologies | Data Science Intern</h3>
+                <p>Jul 2024 - Sep 2024</p>
+                <ul>
+                    <li>Developed interactive business intelligence dashboards.</li>
+                    <li>Implemented chatbot improvements using LLaMA and Claude.</li>
+                    <li>Enhanced NLP-based customer query analysis models.</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <h3>Leeds School of Business | Graduate Research Assistant</h3>
+                <p>Jun 2024 - Sep 2024</p>
+                <ul>
+                    <li>Developed LLM-powered models for human behavior analysis.</li>
+                    <li>Built AI-driven tools to predict business trends and decision patterns.</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <h3>Hexaware Technologies | Associate Software Engineer - Data Scientist</h3>
                 <p>Oct 2020 - Dec 2021</p>
                 <ul>
-                    <li>Developed custom NER models improving entity extraction accuracy by 20%.</li>
+                    <li>Developed custom Named Entity Recognition (NER) models improving accuracy by 20%.</li>
                     <li>Built predictive models for loan default probability analysis.</li>
                 </ul>
             </div>
+
         </div>
     </section>
 
@@ -85,24 +122,37 @@
         <h2>Projects</h2>
         <div class="project-grid">
             <div class="project-card">
-                <img src="assets/climate.png" alt="Predictive Climate Analytics">
                 <h3>Predictive Climate Analytics</h3>
-                <p>Developed AI models to analyze climate variability and predict environmental impacts.</p>
-                <a href="https://sites.google.com/colorado.edu/predictiveclimateanalytics/home" target="_blank">View Project</a>
+                <p>Developed AI models to analyze climate variability.</p>
+                <a href="https://sites.google.com/colorado.edu/predictiveclimateanalytics">View Project</a>
             </div>
             <div class="project-card">
-                <img src="assets/crime.png" alt="Houston Crime Analysis">
                 <h3>Houston Crime Analysis</h3>
-                <p>Analyzed crime trends from 2019-2024 using AI-driven techniques.</p>
-                <a href="https://sites.google.com/view/houston-crime-analysis/home" target="_blank">View Project</a>
+                <p>Created an AI-driven analysis of crime data trends.</p>
+                <a href="https://sites.google.com/view/houston-crime-analysis">View Project</a>
             </div>
         </div>
+    </section>
+
+    <section id="certifications" class="section">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Microsoft Certified: Azure Fundamentals</li>
+            <li>Microsoft Certified: AI Fundamentals</li>
+            <li>Google Cloud Certified (MLOps Fundamentals)</li>
+            <li>DataRobot Certified: DataRobot for Data Scientist</li>
+        </ul>
     </section>
 
     <section id="contact" class="section">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:prma3214@colorado.edu">prma3214@colorado.edu</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/preethu-nath-78274417a/" target="_blank">Connect on LinkedIn</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/preethu-nath-78274417a" target="_blank">Connect on LinkedIn</a></p>
     </section>
+
+    <footer>
+        <p>© 2025 Preethu Nath | AI | Data Science | Innovation</p>
+    </footer>
+
 </body>
 </html>
