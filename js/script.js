@@ -5,3 +5,4 @@ document.addEventListener("DOMContentLoaded", function() {
         section.classList.add("fade-in");
     });
 });
+
