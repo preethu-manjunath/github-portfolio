@@ -1,28 +1,65 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #34495E; /* Dark Blue */
+    color: #ECF0F1; /* Light Grayish White */
     margin: 0;
     padding: 0;
 }
 
+/* Job Search Ticker */
+.ticker-container {
+    width: 100%;
+    background-color: #FFFFFF; /* White */
+    color: #2C3E50; /* Dark Blue */
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.ticker-text {
+    display: inline-block;
+    animation: ticker-scroll 10s linear infinite;
+}
+
+/* Animation */
+@keyframes ticker-scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Push the content down */
+header {
+    margin-top: 40px;
+}
+
 /* Header */
 header {
-    background-color: #1e1e1e;
+    background-color: #2C3E50; /* Dark Navy */
     padding: 15px 0;
     text-align: center;
 }
 
 nav h1 {
     font-size: 26px;
-    color: #ff914d;
+    color: #FFFFFF; /* White */
     margin: 0;
 }
 
 .subtitle {
     font-size: 18px;
-    color: #bbbbbb;
+    color: #BDC3C7; /* Gray */
     margin-top: 5px;
 }
 
@@ -35,11 +72,12 @@ nav ul {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 16px;
 }
 
+/* Resume Download Button */
 .resume-container {
     text-align: center;
     margin-top: 10px;
@@ -47,8 +85,8 @@ nav ul li a {
 
 .resume-link {
     display: inline-block;
-    background: #ff914d; /* Orange button */
-    color: #fff;
+    background: #BDC3C7; /* Light Gray */
+    color: #2C3E50; /* Dark Blue */
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
@@ -57,7 +95,7 @@ nav ul li a {
 }
 
 .resume-link:hover {
-    background: #ff7b00;
+    background: #7F8C8D; /* Gray Blue */
 }
 
 /* About Section */
@@ -71,13 +109,14 @@ nav ul li a {
 
 /* Square Profile Picture */
 .profile-pic {
-    border-radius: 0; /* Removes circular shape */
+    border-radius: 0; /* Square */
     max-width: 180px;
 }
 
 .small-pic {
     max-width: 120px;
 }
+
 
 .about-text {
     max-width: 600px;
@@ -93,7 +132,8 @@ nav ul li a {
 }
 
 .highlight-box {
-    background-color: #242424;
+    background-color: #BDC3C7; /* Light Gray */
+    color: #2C3E50; /* Dark Blue */
     padding: 15px;
     border-radius: 10px;
     width: 30%;
@@ -116,37 +156,38 @@ nav ul li a {
 }
 
 .skill-list li {
-    background: #333;
+    background: #7F8C8D; /* Medium Gray */
     padding: 10px 15px;
     border-radius: 5px;
 }
 
-/* Experience Section - Now Left Aligned */
+/* Experience Section - Left Aligned */
 #experience {
     padding: 50px;
-    text-align: left;  /* Left alignment */
+    text-align: left;
     max-width: 900px;
     margin: auto;
 }
 
 .experience-grid {
     display: flex;
-    flex-direction: column;  /* Ensures each experience appears in full width */
+    flex-direction: column;
     gap: 20px;
     justify-content: flex-start;
 }
 
 .experience-card {
-    background: #222;
+    background: #BDC3C7; /* Light Gray */
     padding: 15px;
     border-radius: 8px;
     width: 100%;
     text-align: left;
     box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    color: #2C3E50;
 }
 
 .experience-card h3 {
-    color: #ff9900;
+    color: #34495E; /* Dark Navy */
 }
 
 /* Projects Section */
@@ -163,7 +204,7 @@ nav ul li a {
 }
 
 .project-card {
-    background: #222;
+    background: #BDC3C7; /* Light Gray */
     padding: 15px;
     border-radius: 8px;
     text-align: center;
@@ -179,7 +220,7 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background: #333;
+    background: #7F8C8D; /* Medium Gray */
 }
 
 .project-image img {
@@ -190,27 +231,27 @@ nav ul li a {
 }
 
 .project-card h3 {
-    color: #fff;
+    color: #2C3E50; /* Dark Blue */
     margin-top: 10px;
     font-size: 16px;
 }
 
 .project-card p {
-    color: #ccc;
+    color: #2C3E50;
     font-size: 14px;
 }
 
 .project-card a {
-    color: #00aaff;
+    color: #34495E;
     font-weight: bold;
     display: block;
     margin-top: 10px;
 }
 
-/* Certifications Section - Now Left Aligned with Bullets */
+/* Certifications Section */
 #certifications {
     padding: 50px;
-    text-align: left; /* Left aligned */
+    text-align: left;
     max-width: 900px;
     margin: auto;
 }
@@ -226,89 +267,6 @@ nav ul li a {
 }
 
 /* Contact Section */
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header */
-header {
-    background-color: #1e1e1e;
-    padding: 15px 0;
-    text-align: center;
-}
-
-nav h1 {
-    font-size: 26px;
-    color: #ff914d;
-    margin: 0;
-}
-
-.subtitle {
-    font-size: 18px;
-    color: #bbbbbb;
-    margin-top: 5px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-/* About Section */
-.about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 50px 10%;
-}
-
-/* Square Profile Picture */
-.profile-pic {
-    border-radius: 0;
-    max-width: 180px;
-}
-
-.small-pic {
-    max-width: 120px;
-}
-
-.about-text {
-    max-width: 600px;
-    text-align: justify;
-}
-
-/* Highlight Boxes */
-.highlight-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 10%;
-}
-
-.highlight-box {
-    background-color: #242424;
-    padding: 15px;
-    border-radius: 10px;
-    width: 30%;
-    text-align: center;
-}
-
-/* Contact Section - Centered Blocks */
 #contact {
     padding: 50px;
     text-align: center;
@@ -327,12 +285,13 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: #222;
+    background: #BDC3C7;
     padding: 15px 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
     width: 250px;
+    color: #2C3E50;
 }
 
 .contact-item img {
@@ -341,7 +300,7 @@ nav ul li a {
 }
 
 .contact-item a {
-    color: #ffffff;
+    color: #2C3E50;
     text-decoration: none;
     font-size: 16px;
 }
@@ -352,11 +311,35 @@ nav ul li a {
 
 /* Footer */
 footer {
-    background: #222;
+    background: #2C3E50;
     text-align: center;
     padding: 15px;
     margin-top: 30px;
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
 
-change this accordingly
+    .highlight-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .experience-grid {
+        gap: 10px;
+    }
+
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
