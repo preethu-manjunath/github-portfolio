@@ -13,61 +13,42 @@
       font-family: 'Segoe UI', sans-serif;
     }
 
-    header {
+    /* Fixed top navbar */
+    nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: transparent;
-      z-index: 1000;
-      transition: background-color 0.3s ease;
-    }
-
-    .nav-wrapper.scrolled {
-      background-color: #2C3E50;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    .nav-wrapper {
+      background: transparent;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 40px;
-      color: #fff;
-    }
-
-    nav h1 {
-      display: none;
+      justify-content: center;
+      padding: 15px 0;
+      z-index: 999;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 25px;
+      gap: 30px;
       margin: 0;
-      padding: 0;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 8px;
+      backdrop-filter: blur(5px);
     }
 
     nav ul li a {
-      color: #fff;
+      color: #000;
       text-decoration: none;
-      font-weight: 500;
-    }
-
-    .resume-link {
-      background: #BDC3C7;
-      color: #2C3E50;
-      padding: 6px 12px;
-      border-radius: 6px;
       font-weight: bold;
-      text-decoration: none;
     }
 
     .hero-section {
-      margin-top: 60px;
-      position: relative;
       height: 100vh;
-      width: 100%;
-      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
     }
 
     .hero-bg {
@@ -75,35 +56,26 @@
       width: 100%;
       height: 100%;
       background: url('assets/ds.png') center/cover no-repeat;
-      z-index: 1;
+      opacity: 0.6;
+      z-index: 0;
     }
 
     .hero-content {
-      position: relative;
       z-index: 2;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       text-align: center;
-      color: white;
+      color: #000;
     }
 
     .hero-content h1 {
       font-size: 3.5rem;
+      font-weight: bold;
       margin-bottom: 1rem;
-      animation: fadeSlideUp 1s ease-out forwards;
     }
 
     .typewriter {
-      font-size: 1.5rem;
-      font-weight: 300;
-      border-right: 2px solid white;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #000;
     }
 
     .scroll-btn {
@@ -117,51 +89,27 @@
       color: #2C3E50;
     }
 
-    .scroll-btn:hover {
-      background-color: white;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 14ch }
-    }
-
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: white; }
-    }
-
-    @keyframes fadeSlideUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to   { opacity: 1; transform: translateY(0); }
+    .resume-link {
+      margin-top: 12px;
+      font-weight: bold;
+      color: #2C3E50;
+      display: inline-block;
+      text-decoration: underline;
     }
   </style>
-  <script>
-    window.addEventListener('scroll', function () {
-      const nav = document.querySelector('.nav-wrapper');
-      if (window.scrollY > 20) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
-  </script>
 </head>
 <body>
-  <header>
-    <nav class="nav-wrapper">
-      <h1>Preethu Nath Manjunath</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="assets/Preethu_Resume.pdf" download class="resume-link">📄 Download Resume</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="resume-link" href="assets/Preethu_Resume.pdf" download>Download Resume</a></li>
+    </ul>
+  </nav>
 
   <section class="hero-section">
     <div class="hero-bg"></div>
@@ -173,6 +121,5 @@
       </button>
     </div>
   </section>
-
 </body>
 </html>
