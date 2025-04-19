@@ -13,16 +13,20 @@
       font-family: 'Segoe UI', sans-serif;
     }
 
-    /* Fixed top navbar */
-    nav {
+    header {
       position: fixed;
       top: 0;
       width: 100%;
+      z-index: 1000;
       background: transparent;
+    }
+
+    nav {
       display: flex;
       justify-content: center;
-      padding: 15px 0;
-      z-index: 999;
+      align-items: center;
+      padding: 15px 40px;
+      gap: 40px;
     }
 
     nav ul {
@@ -30,25 +34,23 @@
       display: flex;
       gap: 30px;
       margin: 0;
-      padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 8px;
-      backdrop-filter: blur(5px);
+      padding: 0;
+      background: transparent;
     }
 
     nav ul li a {
-      color: #000;
+      color: white;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
     }
 
     .hero-section {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      margin-top: 60px;
       position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
     }
 
     .hero-bg {
@@ -56,26 +58,37 @@
       width: 100%;
       height: 100%;
       background: url('assets/ds.png') center/cover no-repeat;
-      opacity: 0.6;
-      z-index: 0;
+      opacity: 0.8;
+      transform: scale(1);
+      z-index: 1;
     }
 
     .hero-content {
+      position: relative;
       z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      color: #000;
+      color: white;
     }
 
     .hero-content h1 {
       font-size: 3.5rem;
-      font-weight: bold;
       margin-bottom: 1rem;
+      font-weight: bold;
     }
 
     .typewriter {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #000;
+      font-size: 1.5rem;
+      font-weight: 300;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
     }
 
     .scroll-btn {
@@ -89,28 +102,38 @@
       color: #2C3E50;
     }
 
-    .resume-link {
-      margin-top: 12px;
-      font-weight: bold;
-      color: #2C3E50;
-      display: inline-block;
-      text-decoration: underline;
+    .scroll-btn:hover {
+      background-color: white;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 14ch }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white; }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a class="resume-link" href="assets/Preethu_Resume.pdf" download>Download Resume</a></li>
-    </ul>
-  </nav>
 
+  <!-- NAVBAR -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
   <section class="hero-section">
     <div class="hero-bg"></div>
     <div class="hero-content">
@@ -121,5 +144,6 @@
       </button>
     </div>
   </section>
+
 </body>
 </html>
