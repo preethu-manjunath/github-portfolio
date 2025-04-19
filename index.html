@@ -3,213 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Preethu Nath Manjunath | Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/script.js"></script>
+  <title>Preethu Nath Manjunath | Data Scientist</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('assets/ds.png') center/cover no-repeat;
+    }
+
+    .hero {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5); /* overlay */
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin: 0;
+      animation: fadeSlideUp 1s ease-out forwards;
+    }
+
+    .hero .typewriter {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-top: 1rem;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 14ch }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white; }
+    }
+
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
-
-  <header>
-    <nav>
-      <h1 class="fade-in">Preethu Nath Manjunath</h1>
-      <h2 class="subtitle fade-in">Data Scientist</h2>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="resume-container">
-      <a href="assets/Preethu_Resume.pdf" download class="resume-link">📄 Download Resume</a>
-    </div>
-  </header>
-
-  <section id="about" class="section">
-    <div class="container about-container">
-      <img src="assets/profile.png" alt="Preethu's Memoji" class="profile-pic small-pic" />
-      <div class="about-text">
-        <h2>Hi there, I'm Preethu</h2>
-        <p class="justify">
-          Specialized in leveraging AI and data science to <strong>extract insights, automate processes, and enhance decision-making.</strong>
-        </p>
-        <p class="justify">
-          I have worked with startups, consulting firms, and research teams to develop <strong>ML models, NLP solutions, and BI dashboards</strong>, transforming complex data into actionable intelligence.
-        </p>
-      </div>
-    </div>
-    <div class="ticker-container">
-      <span class="ticker-text">🚀 Actively Looking for Data Science & AI Roles! Open to Opportunities! 📩</span>
-    </div>
-    <div class="highlight-container">
-      <div class="highlight-box">
-        <p>📊 <strong>4+ years of experience</strong> in AI, ML, and data science across consulting, research, and startups.</p>
-      </div>
-      <div class="highlight-box">
-        <p>🤖 <strong>Developed NLP models</strong>, predictive analytics, and LLM-powered solutions to optimize business strategies.</p>
-      </div>
-      <div class="highlight-box">
-        <p>📈 <strong>Empowered businesses</strong> with data-driven insights, driving measurable outcomes.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <ul class="skill-list">
-      <li>Machine Learning, Deep Learning, Predictive Analytics</li>
-      <li>Natural Language Processing (NLP), Large Language Models (LLMs)</li>
-      <li>Data Engineering (ETL Pipelines, SQL, MongoDB, Snowflake, Postgres)</li>
-      <li>Cloud Computing (AWS, GCP, Azure)</li>
-      <li>Business Intelligence (Tableau, Power BI, Supabase)</li>
-      <li>Python, SQL, LangChain, Flask, FastAPI</li>
-      <li>Generative AI (GPT, Claude, Hugging Face Transformers)</li>
-      <li>Data Visualization & Web Scraping (BeautifulSoup, Selenium)</li>
-    </ul>
-  </section>
-
-  <section id="experience" class="section">
-    <h2>Experience</h2>
-    <div class="experience-grid">
-
-      <div class="experience-card">
-        <h3>KOBEYO | Data Consultant Intern</h3>
-        <p>Dec 2024 - Present</p>
-        <ul>
-          <li>Designed and deployed interactive dashboards using Tableau and Supabase, reducing manual job-seeking efforts by 35%.</li>
-          <li>Conducted geospatial job market analysis, improving database coverage by 40%.</li>
-          <li>Automated data ingestion pipelines, cutting query execution time by 50%.</li>
-          <li>Tech Stack: Tableau, Supabase, Python, LLMs, Holistics.</li>
-        </ul>
-      </div>
-
-      <div class="experience-card">
-        <h3>CodeModulo Technologies | Data Science Intern</h3>
-        <p>Jul 2024 - Sep 2024</p>
-        <ul>
-          <li>Built BI dashboard for a retail client, increasing sales by 15% through optimized inventory analysis.</li>
-          <li>Enhanced chatbot response using LLMs (LLaMA, Claude), reducing resolution time by 30%.</li>
-          <li>Tech Stack: Python, SQL, NLP, AWS, Power BI.</li>
-        </ul>
-      </div>
-
-      <div class="experience-card">
-        <h3>Leeds School of Business | Graduate Research Assistant</h3>
-        <p>Jun 2024 - Sep 2024</p>
-        <ul>
-          <li>Created LLM models to analyze and predict human behavior patterns.</li>
-          <li>Automated web scraping pipelines, saving 60% of manual effort.</li>
-          <li>Tech Stack: LangChain, OpenAI API, HuggingFace, Selenium, BeautifulSoup.</li>
-        </ul>
-      </div>
-
-      <div class="experience-card">
-        <h3>Deloitte USI | Data Scientist Consultant</h3>
-        <p>Jan 2022 - Jul 2023</p>
-        <ul>
-          <li>Automated 1,000+ daily news alerts with NLP models (90% accuracy).</li>
-          <li>Developed AI-based risk tracking system, improving supplier monitoring by 30% globally.</li>
-          <li>Built LLM-powered automation pipelines with RAG and AWS services.</li>
-        </ul>
-      </div>
-
-      <div class="experience-card">
-        <h3>Hexaware Technologies | Associate Software Engineer - Data Scientist</h3>
-        <p>Oct 2020 - Dec 2021</p>
-        <ul>
-          <li>Created a custom NER model (70% accuracy) for retail text extraction.</li>
-          <li>Built an XGBoost-based loan default prediction model with 93% recall.</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project-grid">
-
-      <div class="project-card">
-        <div class="project-image">
-          <img src="assets/climate.png" alt="Predictive Climate Analytics">
-        </div>
-        <h3>Predictive Climate Analytics</h3>
-        <p>Developed AI models to analyze climate variability.</p>
-        <a href="https://sites.google.com/colorado.edu/predictiveclimateanalytics" target="_blank">View Project</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image">
-          <img src="assets/crime.png" alt="Houston Crime Analysis">
-        </div>
-        <h3>Houston Crime Analysis</h3>
-        <p>Created an AI-driven analysis of crime data trends.</p>
-        <a href="https://sites.google.com/view/houston-crime-analysis" target="_blank">View Project</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image">
-          <img src="assets/adhd.png" alt="ADHD Assistance App">
-        </div>
-        <h3>ADHD Assistance App</h3>
-        <p>AI-powered productivity tool with voice detection for ADHD users.</p>
-        <a href="https://github.com/preethu-manjunath/ADHD-Assistance-App" target="_blank">View Project</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image">
-          <img src="assets/phone.png" alt="Phone Tracker">
-        </div>
-        <h3>Phone Tracker</h3>
-        <p>Real-time location tracking system built with Python.</p>
-        <a href="https://github.com/preethu-manjunath/Phone-Tracker" target="_blank">View Project</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image">
-          <img src="assets/perpetrator.png" alt="AI-Powered Perpetrator Identification">
-        </div>
-        <h3>AI-Powered Perpetrator Identification</h3>
-        <p>AI system for criminal suspect detection using ML and CV.</p>
-        <a href="https://github.com/preethu-manjunath/AI-Powered-Perpetrator-Identification" target="_blank">View Project</a>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="certifications" class="section">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Microsoft Certified: Azure Fundamentals</li>
-      <li>Microsoft Certified: AI Fundamentals</li>
-      <li>Google Cloud Certified (MLOps Fundamentals)</li>
-      <li>DataRobot Certified: DataRobot for Data Scientist</li>
-    </ul>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <div class="contact-links">
-      <a href="tel:+13034725880" class="contact-item">
-        <img src="assets/phone-icon.png" alt="Phone Icon"> +1 303-472-5880
-      </a>
-      <a href="mailto:prma3214@colorado.edu" class="contact-item">
-        <img src="assets/email-icon.png" alt="Email Icon"> prma3214@colorado.edu
-      </a>
-      <a href="https://www.linkedin.com/in/preethu-nath-78274417a" target="_blank" class="contact-item">
-        <img src="assets/linkedin-icon.png" alt="LinkedIn Icon"> Connect on LinkedIn
-      </a>
-      <a href="https://github.com/preethu-manjunath" target="_blank" class="contact-item">
-        <img src="assets/github-icon.png" alt="GitHub Icon"> github.com/preethu-manjunath
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Preethu Nath | AI | Data Science | Innovation</p>
-  </footer>
-
+  <div class="hero">
+    <h1>Preethu Nath Manjunath</h1>
+    <div class="typewriter">Data Scientist</div>
+  </div>
 </body>
 </html>
