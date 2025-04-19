@@ -17,12 +17,17 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #2C3E50;
+      background-color: transparent;
       z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-wrapper.scrolled {
+      background-color: #2C3E50;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
-    nav {
+    .nav-wrapper {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -31,7 +36,7 @@
     }
 
     nav h1 {
-      display: none; /* Hide title from navbar */
+      display: none;
     }
 
     nav ul {
@@ -131,11 +136,20 @@
       to   { opacity: 1; transform: translateY(0); }
     }
   </style>
+  <script>
+    window.addEventListener('scroll', function () {
+      const nav = document.querySelector('.nav-wrapper');
+      if (window.scrollY > 20) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
 </head>
 <body>
-
   <header>
-    <nav>
+    <nav class="nav-wrapper">
       <h1>Preethu Nath Manjunath</h1>
       <ul>
         <li><a href="#about">About</a></li>
