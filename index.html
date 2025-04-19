@@ -6,110 +6,12 @@
   <title>Preethu Nath Manjunath | Portfolio</title>
   <link rel="stylesheet" href="css/styles.css" />
   <script defer src="js/script.js"></script>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .hero-section {
-      position: relative;
-      height: 100vh;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url('assets/ds.png') center/cover no-repeat;
-      filter: blur(6px);
-      transform: scale(1.1);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      backdrop-filter: brightness(0.9);
-    }
-
-    .hero-content h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      animation: fadeSlideUp 1s ease-out forwards;
-    }
-
-    .typewriter {
-      font-size: 1.5rem;
-      font-weight: 300;
-      border-right: 2px solid white;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
-    }
-
-    .scroll-btn {
-      margin-top: 30px;
-      background-color: #ffffffcc;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      color: #2C3E50;
-    }
-
-    .scroll-btn:hover {
-      background-color: white;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 14ch }
-    }
-
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: white; }
-    }
-
-    @keyframes fadeSlideUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-  </style>
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-  <section class="hero-section">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <h1>Preethu Nath Manjunath</h1>
-      <div class="typewriter">Data Scientist</div>
-      <button class="scroll-btn" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
-        Explore Portfolio ↓
-      </button>
-    </div>
-  </section>
-
-  <!-- HEADER -->
   <header>
     <nav>
       <h1>Preethu Nath Manjunath</h1>
-      <h2 class="subtitle">Data Scientist</h2>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -117,68 +19,73 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="assets/Preethu_Resume.pdf" download class="resume-link">📄 Download Resume</a></li>
       </ul>
     </nav>
-    <div class="resume-container">
-      <a href="assets/Preethu_Resume.pdf" download class="resume-link">📄 Download Resume</a>
-    </div>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container about-container">
-      <img src="assets/profile.png" alt="Preethu's Memoji" class="profile-pic small-pic">
-      <div class="about-text">
-        <h2>Hi there, I'm Preethu</h2>
-        <p class="justify">Specialized in leveraging AI and data science to <strong>extract insights, automate processes, and enhance decision-making.</strong></p>
-        <p class="justify">I have worked with startups, consulting firms, and research teams to develop <strong>ML models, NLP solutions, and BI dashboards</strong>, transforming complex data into actionable intelligence.</p>
-      </div>
-    </div>
-    <div class="ticker-container">
-      <span class="ticker-text">🚀 Actively Looking for Data Science & AI Roles! Open to Opportunities! 📩</span>
-    </div>
-    <div class="highlight-container">
-      <div class="highlight-box">
-        <p>📊 <strong>4+ years of experience</strong> in AI, ML, and data science across consulting, research, and startups.</p>
-      </div>
-      <div class="highlight-box">
-        <p>🤖 <strong>Developed NLP models</strong>, predictive analytics, and LLM-powered solutions to optimize business strategies.</p>
-      </div>
-      <div class="highlight-box">
-        <p>📈 <strong>Empowered businesses</strong> with data-driven insights, driving measurable outcomes.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <ul class="skill-list">
-      <li>Machine Learning, Deep Learning, Predictive Analytics</li>
-      <li>Natural Language Processing (NLP), Large Language Models (LLMs)</li>
-      <li>Data Engineering (ETL Pipelines, SQL, MongoDB, Snowflake, Postgres)</li>
-      <li>Cloud Computing (AWS, GCP, Azure)</li>
-      <li>Business Intelligence (Tableau, Power BI, Supabase)</li>
-      <li>Python, SQL, LangChain, Flask, FastAPI</li>
-      <li>Generative AI (GPT, Claude, Hugging Face Transformers)</li>
-      <li>Data Visualization & Web Scraping (BeautifulSoup, Selenium)</li>
-    </ul>
-  </section>
-
-  <!-- EXPERIENCE -->
   <section id="experience" class="section">
     <h2>Experience</h2>
     <div class="experience-grid">
-      <!-- Place your existing experience-card blocks here -->
-      <!-- (KOBEYO, CodeModulo, Leeds, Deloitte, Hexaware) -->
+      <div class="experience-card">
+        <h3>KOBEYO | Data Consultant Intern</h3>
+        <p>Dec 2024 - Present</p>
+        <ul>
+          <li>Designed and deployed interactive dashboards using Tableau and Supabase, reducing manual job-seeking efforts by 35% and saving users 3+ hours daily.</li>
+          <li>Conducted geospatial job market analysis, improving database coverage by 40% and enhancing employer-seeker matchmaking.</li>
+          <li>Automated data ingestion pipelines, optimizing reporting and cutting query execution time by 50%, enabling faster decision-making.</li>
+          <li>Tech Stack: Tableau, Supabase, Data Pipelines, Holistics, Python, LLMs.</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>CodeModulo Technologies | Data Science Intern</h3>
+        <p>Jul 2024 - Sep 2024</p>
+        <ul>
+          <li>Developed a business intelligence dashboard for a retail client, integrating sales, inventory, and customer data, leading to a 15% sales increase through optimized inventory management.</li>
+          <li>Enhanced chatbot performance by integrating LLMs (LLaMA, Claude), improving text summarization and reducing query resolution time by 30%.</li>
+          <li>Tech Stack: Python, SQL, NLP (spaCy, NLTK), AWS (SageMaker, Glue, S3, Lambda), Power BI, LLaMA, Claude.</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>Leeds School of Business | Graduate Research Assistant</h3>
+        <p>Jun 2024 - Sep 2024</p>
+        <ul>
+          <li>Developed LLM-powered models to analyze and predict human behavior, enhancing research insights.</li>
+          <li>Automated data collection using web scraping, cutting manual efforts by 60% with Selenium and BeautifulSoup.</li>
+          <li>Tech Stack: Hugging Face Transformers, LangChain, OpenAI API, Selenium, BeautifulSoup, Python, Pandas, NumPy.</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>Deloitte USI | Data Scientist Consultant</h3>
+        <p>Jan 2022 - Jul 2023</p>
+        <ul>
+          <li>Automated NLP models to process 1,000+ daily news alerts, achieving 90% accuracy and reducing manual effort by 2 hours/day.</li>
+          <li>Received Spot Award for developing an AI-driven risk event tracking system, which improved real-time supplier monitoring efficiency by 30% on a global scale.</li>
+          <li>Developed proof-of-concept LLM solutions for document automation, conversational AI, and stable diffusion-based image generation, enhancing business intelligence capabilities.</li>
+          <li>Built an automated data ingestion pipeline to capture data directly, eliminating manual collection and third-party reliance, thereby reducing user costs by 15%.</li>
+          <li>Tech Stack: Python, NLP, NER, spaCy, AWS (Glue, S3, SageMaker, Lambda, Step Functions), Retrieval-Augmented Generation (RAG).</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>Hexaware Technologies | Associate Software Engineer - Data Scientist</h3>
+        <p>Oct 2020 - Dec 2021</p>
+        <ul>
+          <li>Developed a custom NER model for a retail client, achieving 70% accuracy, enabling efficient entity recognition from unstructured text.</li>
+          <li>Built a loan default prediction model using XGBoost, improving recall to 93%, enhancing risk assessment and decision-making.</li>
+          <li>Optimized data pipelines for machine learning workflows, reducing processing time and improving model deployment efficiency.</li>
+          <li>Tech Stack: Python, spaCy, XGBoost, AWS (SageMaker, Step Functions, S3, Lambda).</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
   <section id="projects" class="section">
     <h2>Projects</h2>
     <div class="project-grid">
-
       <div class="project-card">
         <div class="project-image">
           <img src="assets/climate.png" alt="Predictive Climate Analytics">
@@ -223,44 +130,8 @@
         <p>AI-driven system for crime suspect detection.</p>
         <a href="https://github.com/preethu-manjunath/AI-Powered-Perpetrator-Identification" target="_blank">View Project</a>
       </div>
-
     </div>
   </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="section">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Microsoft Certified: Azure Fundamentals</li>
-      <li>Microsoft Certified: AI Fundamentals</li>
-      <li>Google Cloud Certified (MLOps Fundamentals)</li>
-      <li>DataRobot Certified: DataRobot for Data Scientist</li>
-    </ul>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <div class="contact-links">
-      <a href="tel:+13034725880" class="contact-item">
-        <img src="assets/phone-icon.png" alt="Phone Icon"> +1 303-472-5880
-      </a>
-      <a href="mailto:prma3214@colorado.edu" class="contact-item">
-        <img src="assets/email-icon.png" alt="Email Icon"> prma3214@colorado.edu
-      </a>
-      <a href="https://www.linkedin.com/in/preethu-nath-78274417a" target="_blank" class="contact-item">
-        <img src="assets/linkedin-icon.png" alt="LinkedIn Icon"> Connect on LinkedIn
-      </a>
-      <a href="https://github.com/preethu-manjunath" target="_blank" class="contact-item">
-        <img src="assets/github-icon.png" alt="GitHub Icon"> github.com/preethu-manjunath
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Preethu Nath | AI | Data Science | Innovation</p>
-  </footer>
 
 </body>
 </html>
