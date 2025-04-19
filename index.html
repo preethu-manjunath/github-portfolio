@@ -85,42 +85,42 @@
 
     /* Hero */
     .hero-section {
-      height: 100vh;
-      background: url('assets/ds.png') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
       position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .hero-section::after {
-      content: '';
+    .hero-bg {
       position: absolute;
       top: 0;
       left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
+      width: 100vw;
+      height: 100vh;
+      background: url('assets/ds.png') center center / cover no-repeat;
+      z-index: 1;
+      filter: blur(3px);
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
+      color: white;
+      text-align: center;
     }
 
     .hero-content h1 {
       font-size: 3.5rem;
       font-weight: bold;
-      color: white;
-      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
     }
 
     .hero-content .typewriter {
-      font-size: 1.8rem;
-      font-weight: 500;
-      color: white;
+      font-size: 1.5rem;
+      font-weight: 400;
       border-right: 2px solid white;
       white-space: nowrap;
       overflow: hidden;
@@ -137,7 +137,6 @@
       from, to { border-color: transparent }
       50% { border-color: white; }
     }
-
     section {
       padding: 60px 20px;
       max-width: 1000px;
