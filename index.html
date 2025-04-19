@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Preethu Nath Manjunath | Portfolio</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/script.js"></script>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     html, body {
       margin: 0;
       padding: 0;
@@ -14,70 +16,70 @@
       scroll-behavior: smooth;
     }
 
-    /* NAVBAR */
+    .ticker {
+      background-color: #2C3E50;
+      color: #FFD700;
+      padding: 8px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
     nav {
       position: fixed;
-      top: 0;
+      top: 30px;
       width: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
       z-index: 1000;
-      background-color: transparent;
-      padding: 20px 0;
+      background-color: rgba(0,0,0,0.65);
+      backdrop-filter: blur(12px);
     }
 
     nav ul {
-      list-style: none;
       display: flex;
-      gap: 30px;
+      gap: 25px;
+      list-style: none;
+      padding: 20px;
       margin: 0;
-      padding: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 20px;
-      padding: 10px 30px;
     }
 
     nav ul li a {
       color: white;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1rem;
       position: relative;
-      padding-bottom: 5px;
     }
 
     nav ul li a::after {
-      content: '';
+      content: "";
       position: absolute;
+      bottom: -5px;
       left: 0;
-      bottom: 0;
-      width: 0%;
+      width: 0;
       height: 2px;
       background-color: white;
       transition: width 0.3s ease;
     }
 
-    nav ul li a:hover::after,
-    nav ul li a.active::after {
+    nav ul li a:hover::after {
       width: 100%;
     }
 
-    /* HERO */
     .hero-section {
       position: relative;
       height: 100vh;
-      width: 100%;
       overflow: hidden;
     }
 
     .hero-bg {
-      position: absolute;
-      width: 100%;
-      height: 100%;
       background: url('assets/ds.png') center/cover no-repeat;
-      filter: blur(6px);
-      transform: scale(1.05);
+      filter: blur(3.5px);
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      width: 100%;
       z-index: 1;
     }
 
@@ -96,35 +98,51 @@
     .hero-content h1 {
       font-size: 3.5rem;
       font-weight: bold;
-      margin-bottom: 0.5rem;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+      text-shadow: 1px 1px 4px #000;
     }
 
-    .hero-content .typewriter {
-      font-size: 1.8rem;
-      font-weight: 500;
-      color: white;
-      animation: typing 2s steps(25, end) forwards, blink-caret 0.75s step-end infinite;
+    .typewriter {
+      font-size: 1.5rem;
       border-right: 2px solid white;
       white-space: nowrap;
       overflow: hidden;
       width: 0;
-      margin-bottom: 1.5rem;
+      animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
     }
 
     .scroll-btn {
-      background-color: #ffffffdd;
+      margin-top: 20px;
+      background-color: white;
       padding: 10px 22px;
-      border: none;
       border-radius: 6px;
+      border: none;
       font-size: 1rem;
       cursor: pointer;
       color: #2C3E50;
-      transition: background 0.3s ease;
     }
 
-    .scroll-btn:hover {
-      background-color: white;
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .project-grid, .experience-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .project-card, .experience-card {
+      background: #f5f5f5;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
     }
 
     @keyframes typing {
@@ -140,7 +158,10 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- Ticker -->
+  <div class="ticker">🚀 Actively Looking for Data Science & AI Roles! Open to Opportunities! 📩</div>
+
+  <!-- NAVIGATION -->
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
@@ -158,11 +179,107 @@
     <div class="hero-content">
       <h1>Preethu Nath Manjunath</h1>
       <div class="typewriter">Data Scientist</div>
-      <button class="scroll-btn" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
-        Explore Portfolio ↓
-      </button>
+      <button class="scroll-btn" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">Explore Portfolio ↓</button>
     </div>
   </section>
 
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About</h2>
+    <p>Specialized in leveraging AI and data science to <strong>extract insights, automate processes, and enhance decision-making</strong>.</p>
+    <p>I’ve worked with startups, consulting firms, and research teams to develop <strong>ML models, NLP solutions, and BI dashboards</strong> transforming complex data into actionable intelligence.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Machine Learning, Deep Learning, Predictive Analytics</li>
+      <li>Natural Language Processing (NLP), Large Language Models (LLMs)</li>
+      <li>Data Engineering (ETL, SQL, Snowflake, MongoDB)</li>
+      <li>Cloud: AWS, Azure, GCP</li>
+      <li>Python, SQL, LangChain, FastAPI, Flask</li>
+      <li>Visualization: Tableau, Power BI, Supabase</li>
+      <li>Generative AI: GPT, Claude, Hugging Face</li>
+    </ul>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-grid">
+      <div class="experience-card">
+        <h3>KOBEYO | Data Consultant Intern</h3>
+        <p>Dec 2024 – Present</p>
+        <ul>
+          <li>Reduced job-seeker effort by 35% via Supabase + Tableau dashboards</li>
+          <li>Cut query execution by 50% through ingestion pipeline automation</li>
+        </ul>
+      </div>
+      <div class="experience-card">
+        <h3>CodeModulo | Data Science Intern</h3>
+        <p>Jul – Sep 2024</p>
+        <ul>
+          <li>Integrated Claude & LLaMA for chatbot summarization (↓ resolution time by 30%)</li>
+          <li>Optimized Power BI dashboards for retail business KPIs</li>
+        </ul>
+      </div>
+      <div class="experience-card">
+        <h3>Deloitte USI | Data Scientist</h3>
+        <p>Jan 2022 – Jul 2023</p>
+        <ul>
+          <li>Built NLP automation for daily news alerts (↑ accuracy: 90%)</li>
+          <li>Developed AI-powered event tracker for global supplier monitoring</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="assets/climate.png" alt="Climate">
+        <h3>Predictive Climate Analytics</h3>
+        <p>Forecasting climate variation via AI models & NOAA datasets.</p>
+      </div>
+      <div class="project-card">
+        <img src="assets/adhd.png" alt="ADHD">
+        <h3>ADHD Productivity App</h3>
+        <p>Voice-triggered planner with GPT-based task suggestions</p>
+      </div>
+      <div class="project-card">
+        <img src="assets/perpetrator.png" alt="Crime">
+        <h3>Crime Perpetrator Detection</h3>
+        <p>Trained a YOLO-based model for identifying suspects from footage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Microsoft Certified: Azure & AI Fundamentals</li>
+      <li>Google Cloud Certified: MLOps</li>
+      <li>DataRobot: AI for Data Scientists</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li>Email: <a href="mailto:prma3214@colorado.edu">prma3214@colorado.edu</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/preethu-nath-78274417a" target="_blank">Connect here</a></li>
+      <li>GitHub: <a href="https://github.com/preethu-manjunath" target="_blank">github.com/preethu-manjunath</a></li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="text-align: center; padding: 20px; font-size: 0.9rem;">
+    © 2025 Preethu Nath Manjunath | AI | Data Science | Innovation
+  </footer>
 </body>
 </html>
